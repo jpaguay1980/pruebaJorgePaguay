@@ -1,0 +1,100 @@
+<! DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <metaname="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listado</title>
+        <link rel="stylesheet" href="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+        <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <title>Mantenimiento Tabla</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <button type="button" class="btn btn-primary" onclick="NuevoTablaTest()"><i class="fa fa-plus"></i> Nuevo</button><br></br>
+    <div class="modal fade" id="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="titulo_modal"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="input-group mb-1">
+                            <input type="hidden" id="txt_id" class="form-control form-control-sm" placeholder="ID">
+                        </div>
+                        <div class="mb-3">
+                            <label for="txt_codigo" class="form-label">Id</label>
+                            <input type="email" class="form-control" id="txt_codigo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="txt_titulo" class="form-label">Titulo</label>
+                            <input type="text" class="form-control" id="txt_titulo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="txt_descripcion" class="form-label">Descripcion</label>
+                            <input type="text" class="form-control" id="txt_descripcion">
+                        </div>
+                        <div class="mb-3">
+                            <label for="txt_fechaCreacion" class="form-label">Fecha Creacion</label>
+                            <input type="date" class="form-control" id="txt_fechaCreacion">
+                        </div>
+                        <div class="mb-3">
+                            <label for="txt_fechaVencimiento" class="form-label">Fecha Vencimiento</label>
+                            <input type="date" class="form-control" id="txt_fechaVencimiento">
+                        </div>
+                        <div class="mb-3">
+                            <label for="txt_completada" class="form-label">Completada</label>
+                            <input type="text" class="form-control" id="txt_completada">
+                        </div> 
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" id="btn_guardar" class="btn btn-primary" onclick="guardar()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table id="tabla" class="table table-bordered border-primary">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Descripción</th>
+                <th>Fecha Creacion</th>
+                <th>Fecha Vencimiento</th>
+                <th>Completada</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <div class="modal modal-dialog-centered" id="dialogo_loading" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div. class="modal-body">
+                    <strong>Loading...</strong>
+                    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+    </script>
+</body>
+<script src="js/tablaTest.js"></script>
+
+</html>
